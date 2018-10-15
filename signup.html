@@ -1,0 +1,70 @@
+<!-- Hi Helena, if you wanna use any of this feel free. I put everything in the html file, 
+    including the JS script for now. When it gets longer and bigger, 
+    it will be good to but that in an extra js file in the JS folder :) -->
+
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Sign Up</title>
+    </head>
+    <body>
+        <h1>Sign Up</h1>
+    
+        <p>First Name: <input type="text" name="firstname" placeholder="First name" id="firstname"></p>
+        <p>Last Name: <input type="text" name="lastname"  placeholder="Last name" id="lastname"></p>
+        <p>EMail: <input type="email" name="email" placeholder="Email-address" id="emailaddress"></p>
+        <p>Password: <input type="password" name="password" placeholder="choose password" id="password"></p>
+        <p>Repeat Password: <input type="password" name="repeatpassword" placeholder="repeat password" id="repeatpassword"></p>
+        <br>
+        <br>
+        <input type = "button" name="submit" placeholder="submit" value="Submit" id="submit">
+    
+        <span id="signupResult"></span>
+    
+<!--JS SCRIPT-->
+        <script>
+    
+        // bind variable to span text
+          var resultSpan = document.getElementById('signupResult');
+        
+        // binding submit button to variable
+          var submit = document.getElementById('submit');
+         
+        // bind input to variables
+          var inputFirstname = document.getElementById('firstname');
+          var inputLastname = document.getElementById('lastname');
+          var inputEmail = document.getElementById('emailaddress');   
+          var inputPassword = document.getElementById('password');
+          var inputRepeatPassword = document.getElementById('repeatpassword');
+    
+        // execute function, by clicking submit button
+        submit.onclick = function signup() {
+          
+        // make sure that user fills out all fields  
+          if(inputFirstname.value.length == 0 || inputLastname.value.length == 0 || inputEmail.value.length == 0 || inputPassword.value.length == 0 || inputRepeatPassword.value.length == 0){
+            resultSpan.innerText = "You need to fill out all fields in order to sign up";
+            return false;
+        }
+         // check if password and confirm password match  
+          if (inputPassword.value == inputRepeatPassword.value){
+              resultSpan.innerText = "Passwords match";
+              
+          } else {
+              resultSpan.innerText = "Passwords don't match.";
+          }
+        }
+       
+        // TODO check against user database, if this email address is already signed up. 
+        // TODO check password strength 
+        // TODO validate email address (making sure that user puts in a real email address, and not just some text)
+        // store sign up input?
+        // display successful sign up message and redirect to login, once signed up
+    
+        </script>
+    
+    </body>
+    </html>
