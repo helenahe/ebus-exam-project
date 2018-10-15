@@ -80,7 +80,8 @@
 
 // To do:
 // - store password as hashpassword
-// - redirect user to site, when logged in? 
+// - redirect user to new site, when logged in? 
 // - display sign out button, disable login once logged in
 // - what is last Access all about?
 //      - enable login again after periode of time, after being blocked for too many failed attempts??
+// - store users in JSON file / local storage 
