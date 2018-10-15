@@ -7,13 +7,21 @@
     <title>Login Page</title>
 </head>
 <body>
+ <div class= container>  
     <h1>Login to your account</h1>
 
     <!--Login Input Form -->
-    <input type = "email" placeholder = "example@travel.com" id= "emailaddress">
-    <input type = "password" placeholder = "******" id ="password">
-    <input type= "button" value = "submit" id = "submit" onclick="login()">
+    <input type = "email" name = "email" placeholder = "example@travel.com" id= "emailaddress">
+    <input type = "password" name = "password" placeholder = "******" id ="password">
+    <input type= "button" name = "submit" value = "submit" id = "submit">
 
+    <br>
+    <br>
+    <!-- display login result, whether successful or failed-->
+    <span id="loginResult"></span>
+
+    <!-- load JS-->
     <script src="js/login.js"></script>
+ </div>
 </body>
 </html>
