@@ -31,6 +31,12 @@
 // binding submit button to variable
     var submit = document.getElementById('submit');
 
+    // executes login function when enter is pressed   (source: https://stackoverflow.com/questions/16011312/execute-function-on-enter-key) 
+    submit.addEventListener("keydown", function(enter) {
+        if (enter.keyCode === 13) { // key === 13 stands for enter/return key
+            login(enter);
+        }
+    })
 // start login function by clicking submit
     submit.onclick = function login() {
 
@@ -50,7 +56,7 @@
 
 //  Successful login in input matches user credentials
    if (inputEmail.value == user.emailaddress && inputPassword.value == user.password) {
-            resultSpan.innerText = "Congrats! You actually remembered your password correctly";
+            resultSpan.innerText = "Congrats "  + user.firstname + " " + user.lastname + ", you actually remembered your password correctly";
             return true;
         }
     }

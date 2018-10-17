@@ -14,6 +14,7 @@
     <body>
         <h1>Sign Up</h1>
     
+    <form id ="signup_form">
         <p>First Name: <input type="text" name="firstname" placeholder="First name" id="firstname"></p>
         <p>Last Name: <input type="text" name="lastname"  placeholder="Last name" id="lastname"></p>
         <p>EMail: <input type="email" name="email" placeholder="Email-address" id="emailaddress"></p>
@@ -21,8 +22,9 @@
         <p>Repeat Password: <input type="password" name="repeatpassword" placeholder="repeat password" id="repeatpassword"></p>
         <br>
         <br>
-        <input type = "button" name="submit" placeholder="submit" value="Submit" id="submit">
-    
+        <input type = "reset" name = "reset" value = "reset" id = "reset">
+        <input type = "submit" name="submit"  value="Submit" id="submit">
+    </form>
         <span id="signupResult"></span>
     
 <!--JS SCRIPT-->
@@ -33,6 +35,13 @@
         
         // binding submit button to variable
           var submit = document.getElementById('submit');
+        
+        // executes signup function when enter is pressed   (source: https://stackoverflow.com/questions/16011312/execute-function-on-enter-key) 
+            submit.addEventListener("keydown", function(e) {
+                if (e.keyCode === 13) { // key === 13 stands for enter/return key
+                    signup(e);
+                }
+            })
          
         // bind input to variables
           var inputFirstname = document.getElementById('firstname');
