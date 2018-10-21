@@ -2,17 +2,6 @@
     var inputEmail = document.getElementById('emailaddress');
     var inputPassword = document.getElementById('password')
 
-// create User class
-    class User{
-
-        constructor(firstname, lastname, emailaddress, password) {
-            this.firstname = firstname;
-            this.lastname = lastname;
-            this.emailaddress = emailaddress;
-            this.password = password; // hash password...what???
-            } // close constructor
-        } //close User class
-
 // hard code some users (replace later with JSON file)
     // 1. creating empty user array
     var users = [];
