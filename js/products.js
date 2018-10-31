@@ -23,5 +23,19 @@ console.log(products);
 
 document.getElementById('listproducts').innerHTML = products;
 
-
+var rows = products; // source: https://stackoverflow.com/questions/44127872/convert-array-of-objects-into-html-table-with-jquery-or-javascript
+ var html = '<table>';
+ html += '<tr>';
+ for( var j in rows[0] ) {
+  html += '<th>' + j + '</th>';
+ }
+ html += '</tr>';
+ for( var i = 0; i < rows.length; i++) {
+  html += '<tr>';
+  for( var j in rows[i] ) {
+    html += '<td>' + rows[i][j] + '</td>';
+  }
+ }
+ html += '</table>';
+ document.getElementById('listproducts').innerHTML = html;
 // TO DO: figure out how to display array in HTML
