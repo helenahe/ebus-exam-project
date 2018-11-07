@@ -81,7 +81,7 @@ submit.onclick = function login() {
 
 }; // close function
 
-//log out button: changes state of isLoggedIn to false again; logout button disappears again after log out
+//logout button: changes state of isLoggedIn to false again; logout button disappears again after log out
 logoutButton.onclick = function LogOut(){
     if (isLoggedIn === true){
     isLoggedIn = false;
