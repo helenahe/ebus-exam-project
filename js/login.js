@@ -20,7 +20,7 @@ var resultSpan = document.getElementById('loginResult');
 // binding submit button to variable
 var submit = document.getElementById('submit');
 
-// NOT WOKRING creating variable that stores whether the user is logged in or not. Starts as false, changes to true on successful log in 
+// creating variable that stores whether the user is logged in or not. Starts as false, changes to true on successful log in 
 var isLoggedIn = false;
 console.log(isLoggedIn);
 
@@ -54,7 +54,7 @@ submit.onclick = function login() {
         //  Successful login if input matches user credentials
         if (inputEmail.value == user.emailaddress && inputPassword.value == user.password) {
             resultSpan.innerText = "Congrats " + user.firstname + " " + user.lastname + ", you actually remembered your password correctly";
-            isLoggedIn = true;// not working
+            isLoggedIn = true;
             logoutButton.style.visibility = 'visible';
             console.log(isLoggedIn); // check if loginStatus changed upon successful login
 
