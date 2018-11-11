@@ -34,11 +34,11 @@ submit.onclick = function signup(e) {
         return false;
     }
     // store sign up input in new user
-    var newUser = new User (
-        inputFirstname.value, 
-        inputLastname.value, 
-        inputEmail.value, 
-        inputPassword.value, 
+    var newUser = new User(
+        inputFirstname.value,
+        inputLastname.value,
+        inputEmail.value,
+        inputPassword.value,
     );
 
     // push user into users array
@@ -48,12 +48,14 @@ submit.onclick = function signup(e) {
     var usersStringified = JSON.stringify(users);
     localStorage.setItem('users', usersStringified);
 
+    resultSpan.innerHTML = "Sign up successful <a href = login.html> click here to log in </a>";
+
     // debugger;
 }
 
- // TODO store sign up input in new user - so you can use to login and ...
- // TODO check against user database, if this email address is already signed up. 
- // TODO check password strength.
+ // TODO store sign up input in new user - so you can use to login and (done)
+ // TODO display successful sign up message and redirect to login, once signed up (done)
+ // TODO check password strength. 
  // TODO validate email address (making sure that user puts in a real email address, and not just some text)
- // display successful sign up message and redirect to login, once signed up
+ // TODO check against user database, if this email address is already signed up. 
  // TODO register date of registration 
