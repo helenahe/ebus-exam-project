@@ -3,8 +3,10 @@ body {
     font-family: 'Caveat Brush', cursive; font-size: 14px; line-height: 21px; color: #222
 }
 .container{
-    width:1140px; margin:auto;
+    width:1140px; 
+    margin:auto;
 }
+
 h1,h2{
     font-family: 'Caveat Brush', cursive; font-size: 30px; text-transform: uppercase; font-weight:bold; margin-bottom: 45px
 }
@@ -53,4 +55,103 @@ header a {
 }
 .search {
     background-color: none; line-height:45px; font-size: 15px;
+}
+
+.shop-item-image {
+    height: 250px;
+}
+
+.shop-item {
+    margin: 30px;
+}
+.shop-item-title {
+    display: block;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.content-section {
+    margin: 1em;
+}
+
+.section-header {
+    
+    text-align: center;
+    font-size: 2.5em;
+}
+.btn {
+    text-align: center;
+    vertical-align: middle;
+    padding: .67em .67em;
+    cursor: pointer;
+    color: white
+}
+.btn-header {
+    margin: .5em 15% 2em 15%;
+    color: white;
+    border: 2px solid #2D9CDB;
+    font-size: 1.5em;
+    padding-left: 2em;
+    padding-right: 2em;
+
+}
+.btn-primary {
+    color: white;
+    background-color: #56CCF2;
+    border: none;
+    border-radius: .3em;
+    font-weight: bold;
+}
+.shop-item {
+    margin: 30px;
+}
+.cart-header {
+    font-weight: bold;
+    font-size: 1.25em;
+    color: #333;
+}
+.cart-total {
+    text-align: end;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+.cart-column {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid black;
+    margin-right: 1.5em;
+    padding-bottom: 10px;
+    margin-top: 10px;
+}
+.cart-row {
+    display: flex;
+}
+.cart-item {
+    width: 45%;
+}
+.cart-item-title {
+    color: #333;
+    margin-left: .5em;
+    font-size: 1.2em;
+}
+.cart-item-image {
+    width: 75px;
+    height: auto;
+    border-radius: 10px;
+}
+.btn-primary-paypal {
+    color: white;
+    background-color: #56CCF2;
+    border: none;
+    border-radius: .3em;
+    font-weight: normal;
+}
+
+.btn-paypal {
+    
+    text-align: center;
+    vertical-align: middle;
+    padding: .67em .67em;
+    cursor: pointer;
 }

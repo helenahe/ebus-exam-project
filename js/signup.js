@@ -1,8 +1,16 @@
 // bind variable to span text
 var resultSpan = document.getElementById('signupResult');
 
-// binding submit button to variable
-var submit = document.getElementById('submit');
+// bind input to variables
+var inputFirstname = document.getElementById('firstname');
+var inputLastname = document.getElementById('lastname');
+var inputEmail = document.getElementById('emailaddress');
+var inputPassword = document.getElementById('password');
+var inputRepeatPassword = document.getElementById('repeatpassword');
+var inputSubmit = document.getElementById('submit');
+
+// check if there are some users in localStorage if not create an empty array, otherwise parse users
+var users = localStorage.getItem('users') ? JSON.parse(localStorage.getItem('users')) : [];
 
 // executes signup function when enter is pressed   (source: https://stackoverflow.com/questions/16011312/execute-function-on-enter-key) 
 submit.addEventListener("keydown", function (e) {
@@ -10,16 +18,6 @@ submit.addEventListener("keydown", function (e) {
         signup(e);
     }
 })
-
-// bind input to variables
-var inputFirstname = document.getElementById('firstname');
-var inputLastname = document.getElementById('lastname');
-var inputEmail = document.getElementById('emailaddress');
-var inputPassword = document.getElementById('password');
-var inputRepeatPassword = document.getElementById('repeatpassword');
-
-// creating empty user array
-var users = [];
 
 // execute function, by clicking submit button
 submit.onclick = function signup(e) {
@@ -36,18 +34,28 @@ submit.onclick = function signup(e) {
         return false;
     }
     // store sign up input in new user
-    users.push(new User(
-        inputFirstname.value, 
-        inputLastname.value, 
-        inputEmail.value, 
-        inputPassword.value, 
-        inputRepeatPassword.value
-    ));
-    console.log(users);
+    var newUser = new User(
+        inputFirstname.value,
+        inputLastname.value,
+        inputEmail.value,
+        inputPassword.value,
+    );
+
+    // push user into users array
+    users.push(newUser);
+
+    // stringify users and put into localStorage
+    var usersStringified = JSON.stringify(users);
+    localStorage.setItem('users', usersStringified);
+
+    resultSpan.innerHTML = "Sign up successful <a href = login.html> click here to log in </a>";
+
+    // debugger;
 }
 
- // TODO store sign up input in new user (done)
- // TODO check against user database, if this email address is already signed up. 
- // TODO check password strength 
+ // TODO store sign up input in new user - so you can use to login and (done)
+ // TODO display successful sign up message and redirect to login, once signed up (done)
+ // TODO check password strength. 
  // TODO validate email address (making sure that user puts in a real email address, and not just some text)
- // display successful sign up message and redirect to login, once signed up
+ // TODO check against user database, if this email address is already signed up. 
+ // TODO register date of registration 
