@@ -97,7 +97,5 @@ logoutButton.onclick = function LogOut(){
 }
 // To do:
 // - store password as hashpassword
-// - redirect user to new site, when logged in? 
 // - what is last Access all about?
 //      - enable login again after periode of time, after being blocked for too many failed attempts??
-// - is isLoggedIn value also stored when redirected to a new page? how to achieve that?  
