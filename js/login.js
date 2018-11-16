@@ -2,10 +2,10 @@
 var inputEmail = document.getElementById('emailaddress');
 var inputPassword = document.getElementById('password');
 
-// hard code some users (replace later with JSON file)
-// 1. creating empty user array
-var users = [];
-// 2. filling user array
+// create users variable and get users from local storage - if there are no users, create an empty array, otherwise parse users
+var users = localStorage.getItem('users') ? JSON.parse(localStorage.getItem('users')) : [];
+
+// 2. hard code some example users
 users.push(new User("Anna", "Smith", "anna@gmail.com", "1"));
 users.push(new User("Ben", "Williams", "ben@gmail.com", "2"));
 
@@ -23,6 +23,10 @@ var submit = document.getElementById('submit');
 // creating variable that stores whether the user is logged in or not. Starts as false, changes to true on successful log in 
 var isLoggedIn = false;
 console.log(isLoggedIn);
+
+// stringify isLoggedIn and put into localStorage
+var isLoggedInStringified = JSON.stringify(isLoggedIn);
+localStorage.setItem('isLoggedIn', isLoggedInStringified);
 
 //making sure the logout button is hidden, when user isn't logged in (changed to visible when login successful)
 var logoutButton = document.getElementById('logoutButton');
@@ -55,6 +59,7 @@ submit.onclick = function login() {
         if (inputEmail.value == user.emailaddress && inputPassword.value == user.password) {
             resultSpan.innerText = "Congrats " + user.firstname + " " + user.lastname + ", you actually remembered your password correctly";
             isLoggedIn = true;
+            localStorage.setItem('isLoggedIn', isLoggedIn); // update local storage
             logoutButton.style.visibility = 'visible';
             console.log(isLoggedIn); // check if loginStatus changed upon successful login
 
@@ -85,6 +90,7 @@ submit.onclick = function login() {
 logoutButton.onclick = function LogOut(){
     if (isLoggedIn === true){
     isLoggedIn = false;
+    localStorage.setItem('isLoggedIn', isLoggedIn); // update local storage
     logoutButton.style.visibility = 'hidden';
     console.log(isLoggedIn);
     }
