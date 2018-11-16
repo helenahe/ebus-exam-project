@@ -5,11 +5,11 @@ var inputPassword = document.getElementById('password');
 // create users variable and get users from local storage - if there are no users, create an empty array, otherwise parse users
 var users = localStorage.getItem('users') ? JSON.parse(localStorage.getItem('users')) : [];
 
-// 2. hard code some example users
-users.push(new User("Anna", "Smith", "anna@gmail.com", "1"));
-users.push(new User("Ben", "Williams", "ben@gmail.com", "2"));
+            // 2. hard code some example users
+                users.push(new User("Anna", "Smith", "anna@gmail.com", "1"));
+                users.push(new User("Ben", "Williams", "ben@gmail.com", "2"));
 
-console.log(users); // check users
+                console.log(users); // check users
 
 // setting allowed login attempts to block user after 3 unsuccessful tries
 var attempts = 3;
@@ -24,9 +24,9 @@ var submit = document.getElementById('submit');
 var isLoggedIn = false;
 console.log(isLoggedIn);
 
-// stringify isLoggedIn and put into localStorage
-var isLoggedInStringified = JSON.stringify(isLoggedIn);
-localStorage.setItem('isLoggedIn', isLoggedInStringified);
+    // stringify isLoggedIn and put into localStorage
+    var isLoggedInStringified = JSON.stringify(isLoggedIn);
+    localStorage.setItem('isLoggedIn', isLoggedInStringified);
 
 //making sure the logout button is hidden, when user isn't logged in (changed to visible when login successful)
 var logoutButton = document.getElementById('logoutButton');
@@ -60,7 +60,7 @@ submit.onclick = function login() {
             resultSpan.innerText = "Congrats " + user.firstname + " " + user.lastname + ", you actually remembered your password correctly";
             isLoggedIn = true;
             localStorage.setItem('isLoggedIn', isLoggedIn); // update local storage
-            logoutButton.style.visibility = 'visible';
+            logoutButton.style.visibility = 'visible'; // show logout button
             console.log(isLoggedIn); // check if loginStatus changed upon successful login
 
             return false;
