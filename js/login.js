@@ -56,7 +56,7 @@ submit.onclick = function login() {
         console.log(i) // checking if loop works
 
         //  Successful login if input matches user credentials
-        if (inputEmail.value == user.emailaddress && inputPassword.value == user.password) {
+        if (inputEmail.value == user.emailaddress && MD5(inputPassword.value) == user.password) {
             resultSpan.innerText = "Congrats " + user.firstname + " " + user.lastname + ", you actually remembered your password correctly";
             isLoggedIn = true;
             localStorage.setItem('isLoggedIn', isLoggedIn); // update local storage

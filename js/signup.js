@@ -48,7 +48,8 @@ submit.onclick = function signup(e) {
         inputFirstname.value,
         inputLastname.value,
         inputEmail.value,
-        inputPassword.value,
+        // The MD5 is a weak hashing algorithm method (source: https://stackoverflow.com/questions/14733374/how-to-generate-md5-file-hash-on-javascript/33486055#33486055)
+        MD5(inputPassword.value),
         Date()
     );
 
@@ -71,5 +72,5 @@ submit.onclick = function signup(e) {
  // TODO validate email address (making sure that user puts in a real email address, and not just some text). (DONE)
  // TODO register date of registration. (DONE)
  // TODO check against user database, if this email address is already signed up. (DONE)
- // TODO Hash password when storing it.
+ // TODO Hash password when storing it. (DONE)
  // TODO Make the info disappear from the text fields when signing in. (DONE)
