@@ -22,6 +22,9 @@ h2 {
 .clearfix{clear: both;
 }
 
+.slider {
+    line-height: 40px;
+}
 /*Generic CSS */
 header ul {  
     list-style: none;
