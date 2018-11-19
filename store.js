@@ -1,6 +1,3 @@
-
-
-
 //## 1) Check if the document is fully loaded... keep waiting for the document to fully load before doing anything else
 //## 2) everytime the loop of checking runs, keep an event listener checking for loaded signal
 //## when loaded call funtion "ready()" (the main program)
@@ -200,20 +197,3 @@ function updateCartTotal() {
 
 }
 
-
-//NOT WORKING YET 
-// create isLoggedIn variable and get false/true from local storage - if there is no value stored yet, set value to false. 
-var isLoggedIn = localStorage.getItem('isLoggedIn') ? JSON.parse(localStorage.getItem('isLoggedIn')) : false;  
-console.log(isLoggedIn);
-
-//create checkoutButton variable to then hide checkout (next step)
-var checkoutButton = document.getElementById('checkoutButton');
-checkoutButton.style.visibility = 'hidden';
-
-function CheckOut(){ // how to trigger this function? upon pageload?
-    if (isLoggedIn === true){
-    checkoutButton.style.visibility = 'visible';
-    console.log(isLoggedIn);
-    }
-}
-CheckOut(); //call checkout function to make sure checkout is hidden when user isn't logged in
