@@ -40,15 +40,14 @@ submit.onclick = function signup(e) {
             resultSpan.innerText = 'This email address is already in use';
             return false;
         } 
-
-    }
+    } //close function
 
     // store sign up input in new user
     var newUser = new User(
         inputFirstname.value,
         inputLastname.value,
         inputEmail.value,
-        // The MD5 is a weak hashing algorithm method (source: https://stackoverflow.com/questions/14733374/how-to-generate-md5-file-hash-on-javascript/33486055#33486055)
+        // The MD5 is a hashing algorithm method (source: https://stackoverflow.com/questions/14733374/how-to-generate-md5-file-hash-on-javascript/33486055#33486055)
         MD5(inputPassword.value),
         Date()
     );
