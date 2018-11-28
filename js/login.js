@@ -1,4 +1,4 @@
-// get input from login for and set as variables
+// get input from login form and set as variables
 var inputEmail = document.getElementById('emailaddress');
 var inputPassword = document.getElementById('password');
 
@@ -11,7 +11,7 @@ var users = localStorage.getItem('users') ? JSON.parse(localStorage.getItem('use
 
                 console.log(users); // check users
 
-// setting allowed login attempts to block user after 3 unsuccessful tries
+// set allowed login attempts to block user after 3 unsuccessful tries
 var attempts = 3;
 
 // connect variable to resultLogin to display login output in html
@@ -55,9 +55,9 @@ submit.onclick = function login() {
 
         console.log(i) // checking if loop works
 
-        //  Successful login if input matches user credentials
+        //  Successful login if input matches stored user credentials
         if (inputEmail.value == user.emailaddress && MD5(inputPassword.value) == user.password) {
-            resultSpan.innerText = "Congrats " + user.firstname + " " + user.lastname + ", you actually remembered your password correctly";
+            resultSpan.innerText = "Welcome " + user.firstname + " " + user.lastname + "!";
             isLoggedIn = true;
             localStorage.setItem('isLoggedIn', isLoggedIn); // update local storage
             logoutButton.style.visibility = 'visible'; // show logout button
@@ -78,13 +78,13 @@ submit.onclick = function login() {
 
     } else {
         attempts--; //subtract one from allowed attempts 
-        resultSpan.innerText = "Nice try! Go again. After this, you have " + attempts + " more attempts to get it right.";
+        resultSpan.innerText = "The email or password you entered was wrong. You have " + attempts + " more attempts.";
         console.log(attempts); // check if counter works
         console.log(isLoggedIn); // check if loginStatus still false
         return false;
     }
 
-}; // close function
+}; // close login function
 
 //logout button: changes state of isLoggedIn to false again; logout button disappears again after log out
 logoutButton.onclick = function LogOut(){
@@ -95,7 +95,3 @@ logoutButton.onclick = function LogOut(){
     console.log(isLoggedIn);
     }
 }
-// To do:
-// - store password as hashpassword
-// - what is last Access all about?
-//      - enable login again after periode of time, after being blocked for too many failed attempts??
