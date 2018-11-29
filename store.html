@@ -4,17 +4,17 @@
         <head>
                 <title> Travel Packages </title>  
                 <meta name="description" content="Cheap and Nice Travel Packages for everyone.">
-                <link href = "css/style.css" type= "text/css">
+                <link href = "styles/style.css" type= "text/css">
                 <!-- Inserting a font using google api  -->
                 <link href="https://fonts.googleapis.com/css?family=Caveat+Brush&amp;subset=latin-ext" rel="stylesheet">
                 <!-- Using the clip pngs from fontawesome -->
                 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
                 <!-- Adding javascript code -->
-                <script src="store001.js" async></script>
+                <script src="js/store001.js" async></script>
                 <!-- the 3 lines below are for the implemented PayPal checkout button  -->
                 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
                 <meta name="viewport" content="width=device-width, initial-scale=1">
-                <script src="paypal.js"></script>
+                <script src="js/paypal.js"></script>
             
         </head>
             
@@ -112,14 +112,14 @@
                 </div>
             </section>
             
-            <script src="store001.js">
+            <script src="js/store001.js">
             
             var total = updatecart()
             
             </script>
 <!--  Inserting Checkout button from PayPal API and we give it as a price input the total price of our cart from store.js function updateCartTotal()  -->
 <div class ="container btn-paypal btn-primary-paypal btn-paypal222" img src="Images/Album 3.png" id="paypal-button-container"></div> 
-<link rel="stylesheet" href="style.css" />
+<link rel="stylesheet" href="styles/style.css" />
 
 
 <script>
@@ -155,9 +155,6 @@
            });
        }
    }, '#paypal-button-container');
-</script>
-
-
-        
+</script>        
     </body>
 </html>

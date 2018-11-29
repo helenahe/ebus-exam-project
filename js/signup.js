@@ -64,12 +64,3 @@ submit.onclick = function signup(e) {
     document.getElementById("signup_form").reset();
     // debugger;
 }
-
- // TODO store sign up input in new user - so you can use to login and (DONE)
- // TODO display successful sign up message and redirect to login, once signed up (DONE)
- // TODO check password strength. (DONE)
- // TODO validate email address (making sure that user puts in a real email address, and not just some text). (DONE)
- // TODO register date of registration. (DONE)
- // TODO check against user database, if this email address is already signed up. (DONE)
- // TODO Hash password when storing it. (DONE)
- // TODO Make the info disappear from the text fields when signing in. (DONE)
