@@ -1,0 +1,273 @@
+*{
+    margin: 0; 
+    padding: 0;
+    border:0; 
+    outline: none;
+    box-sizing: border-box;
+}  
+body {
+    font-family: 'Caveat Brush', cursive; font-size: 14px; line-height: 21px; color: #222
+}
+.container{
+    width:1140px; 
+    margin:auto;
+    padding: 0 1.5em;
+}
+a:hover {
+    background-color: #5ce1e6
+}
+
+h1,h2{
+    font-family: 'Caveat Brush', cursive; 
+    font-size: 30px; 
+    text-transform: uppercase; 
+    font-weight:bold; 
+    margin-bottom: 45px
+}
+h2 {
+    font-size: 20px; margin-bottom: 26px
+}
+.pull-left {
+    float: left;
+}
+.pull-right {
+    float: right;
+}
+.clearfix{
+    clear: both;
+}
+
+
+.slider {
+    line-height: 40px;
+}
+/*Generic CSS */
+header ul {  
+    list-style: none;
+    line-height: 40px;
+}
+header li, header a {
+    display: inline-block;
+}
+header li {
+    padding: 12px 20px
+}
+header a {
+    color: #222222; text-decoration: none;
+}
+.top-info li{
+    border-right: 1px solid #cccccc
+}
+.top-links li {
+    border-left: 1px solid  #cccccc
+}
+.top-header {
+    border-bottom:1px solid  #cccccc
+}
+.main-header {
+    padding: 21px; 0
+}
+.main-header li{
+    padding: inherit;
+}
+.main-header a {
+    padding: 10px;  
+    font-size: 15px; 
+    font-weight:bold; 
+    text-transform: uppercase;
+}
+
+.shop-packages{
+    display: flex;
+    flex-wrap: wrap;
+}
+.shop-package {
+    margin: 10px;
+}
+.shop-package-name {
+    font-size: 30px;
+    display: block;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+.shop-item-details {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+
+.section-name {
+    
+    font-size:45px;
+    text-align: center;
+    font-size: 2.5em;
+    padding: 
+    
+}
+.section-header {
+    
+    text-align: center;
+    font-size: 2.5em;
+    
+}
+.btn{
+    text-align: center;
+    vertical-align: middle;
+    padding: .67em .67em;
+    cursor: pointer;
+    color: white
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    
+}
+.btn-header {
+    margin: .5em 15% 2em 15%;
+    color: white;
+    border: 2px solid #2D9CDB;
+    font-size: 1.5em;
+    padding-left: 2em;
+    padding-right: 2em;
+
+
+}
+
+.shop-package {
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.cart-header {
+    font-weight: bold;
+    font-size: 1.25em;
+    color: #333;
+}
+.cart-total {
+    text-align: end;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.cart-total-title {
+    font-weight: bold;
+    font-size: 1.5em;
+    color: black;
+    margin-right: 20px;
+}
+
+.cart-total-price {
+    color: #333;
+    font-size: 1.1em;
+}
+.cart-row {
+    display: flex;
+
+}
+.cart-column {
+    display: flex;
+    align-items: center;
+    margin-right: 1.5em;
+    padding-bottom: 10px;
+    margin-top: 10px;
+}
+.cart-item{
+    width: 45%;
+    
+}
+
+.cart.price {
+    width: 30%
+    text-align: center;
+}
+
+.cart.quantity {
+    width: 25%;
+    text-align: center;
+}
+
+.cart-item-title {
+    color: #333;
+    margin-left: .5em;
+    font-size: 1.2em;
+   
+}
+.cart-item-image {
+    width: 75px;
+    height: auto;
+    border-radius: 10px;
+}
+.btn-primary-paypal {
+    color: white;
+    background-color: #5ce1e6;
+    border: none;
+    border-radius: .3em;
+    font-weight: normal;
+}
+
+.btn-paypal {
+    
+    text-align: center;
+    vertical-align: middle;
+    padding: .67em .67em;
+    cursor: pointer;
+}
+.cart-total-title {
+    font-weight: bold;
+    font-size: 40px;
+}
+.cart-total-price {
+    color: #333;
+    font-size: 60px;
+}
+
+.btn-add {
+    color: white;
+    background-color: #5ce1e6;
+    border: none;
+    border-radius: .3em;
+    font-weight: bold;
+}
+
+.btn-remove {
+    color: white;
+    background-color: #5ce1e6;
+    border: none;
+    border-radius: .3em;
+    font-weight: bold;
+}
+
+h3 {
+    padding-bottom: 4%;
+}
+
+form {
+    padding: 20px 20px 20px 20px;
+    font-size: 16px;    
+    box-sizing: border-box;
+    display: inline-block;
+    border-radius: 20px;
+    border: 1px solid gray;
+    
+}
+
+form p {
+    display: block;
+    border-radius: 2px;
+    padding: 5px 5px 5px 5px;
+}
+
+form button {
+    background: gray;
+    color: white;
+    font-size: 12px;
+    font-family: 'Caveat Brush', cursive; font-size: 14px;
+    border-radius: 8px;
+    padding: 15px;
+}
+
