@@ -7,20 +7,20 @@ var inputLastname = document.getElementById('lastname');
 var inputEmail = document.getElementById('emailaddress');
 var inputPassword = document.getElementById('password');
 var inputRepeatPassword = document.getElementById('repeatpassword');
-var inputSubmit = document.getElementById('submit');
+// var inputSubmit = document.getElementById('submit');
 
 // check if there are some users in localStorage if not create an empty array, otherwise parse users
 var users = localStorage.getItem('users') ? JSON.parse(localStorage.getItem('users')) : [];
 
-// executes signup function when enter is pressed   (source: https://stackoverflow.com/questions/16011312/execute-function-on-enter-key) 
-submit.addEventListener("keydown", function (e) {
-    if (e.keyCode === 13) { // key === 13 stands for enter/return key
-        signup(e);
-    }
-})
+// // executes signup function when enter is pressed   (source: https://stackoverflow.com/questions/16011312/execute-function-on-enter-key) 
+// submit.addEventListener("keydown", function (e) {
+//     if (e.keyCode === 13) { // key === 13 stands for enter/return key
+//         signup(e);
+//     }
+// })
 
 // execute function, by clicking submit button
-submit.onclick = function signup(e) {
+document.querySelector('#signup_form').addEventListener('submit', function signup(e) {
     e.preventDefault(); //to tell the browser not to refresh
 
     // make sure that user fills out all fields  
@@ -63,4 +63,4 @@ submit.onclick = function signup(e) {
 
     document.getElementById("signup_form").reset();
     // debugger;
-}
+});
