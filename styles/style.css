@@ -65,7 +65,7 @@ header a {
     border-bottom:1px solid  #cccccc
 }
 .main-header {
-    padding: 21px; 0
+    padding: 21px; 
 }
 .main-header li{
     padding: inherit;
@@ -102,8 +102,7 @@ header a {
     font-size:45px;
     text-align: center;
     font-size: 2.5em;
-    padding: 
-    
+    padding: 2px;    
 }
 .section-header {
     
@@ -116,7 +115,7 @@ header a {
     vertical-align: middle;
     padding: .67em .67em;
     cursor: pointer;
-    color: white
+    color: white;
     border: none;
     color: white;
     padding: 15px 32px;
@@ -182,7 +181,7 @@ header a {
 }
 
 .cart.price {
-    width: 30%
+    width: 30%;
     text-align: center;
 }
 
